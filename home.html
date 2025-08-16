@@ -1,0 +1,159 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+    <!-- <script src="/TAILWIND/script.js"></script> -->
+
+</head>
+ <body class=" w-full bg-green-800">
+         
+         <header id="head" class="flex justify-between py-5 px-10 border-b-2 align-items bg-yellow-100 fixed top-0 left-0 w-full z-50 ">
+           <h3 class="font-semibold text-3xl">Budget Tracker</h3>
+       
+           <menu >
+             <button class="md:hidden" id="navToggler">
+               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                 class="w-8 h-8">
+                 <path id="openNav" class="" stroke-linecap="round" stroke-linejoin="round"
+                   d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
+                 <path id="closeNav" class="hidden" strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+               </svg>
+             </button>
+              <nav id="mainNav"
+               class=" left-0 top-[73px] w-[100%] flex justify-center p-[20px] h-[auto] py-20 md:sticky  md:p-0 hidden md:block">
+               <ul id="text" class="flex flex-col gap-10 md:flex-row items-center font-semibold text-xl">
+                 <li>
+                   <a class=" hover:border-b-4 border-gray-400 py-5" href="home.html">Home</a>
+                 </li>
+                 <li>
+                   <a class=" hover:border-b-4 border-gray-400 py-5" href="about.html">About</a>
+                 </li>
+                 <li>
+                   <a class=" hover:border-b-4 border-gray-400 py-5" href="addtransac.html">Add Transactions</a>
+                 </li>
+                 <li>
+                  <a class=" hover:border-b-4 border-gray-400 py-5" href="setting.html">Setting</a>
+                </li>
+               </ul>
+             </nav> 
+           </menu>
+         </header>
+   
+   <section class="w-full lg:h-50 md:h-100 mb-24 pt-24">
+      <div class="md:w-full lg:w-full mb-24 lg:h-50 mb-18 md:h-100 py-4 text-yellow-100">
+   
+          <p class=" font-bold text-6xl text-center mb-2"> WELCOME YOUR BUDGET TRACKER</p>
+      
+           <p class=" text-center text-semibold text-xl mb-2"> Easily manage your incomes,and your expenses</p>
+        
+            <p class=" text-sm text-center text-xl  mb-2">Earn but also spend wisely </p>
+      
+            <p class="text-center text-lg  mb-2">Earn,Plan,Spend...</p>
+         
+      </div>
+   </section>
+     
+   <section  class="w-full h-auto p-4 mb-30">
+         <div class=" flex flex-cols-2 items-center justify-center space-x-4 h-auto ">
+        
+            <button  class="rounded-xl font-semibold bg-yellow-100 w-40 h-14 text-xl text-black">
+            <a href="addtransac.html">Get Started</a> 
+              </button>
+                   <button  class="rounded-xl font-semibold bg-black w-40  h-14 lg:text-xl md:text-lg text-yellow-100">
+                  <a href="about.html">Learn More</a>
+               </button>
+           
+          </div>
+   </section>
+     
+    <section id="about" class="py-16 px-6 md:px-12 relative bg-gradient-to-t from-green-700 to-yellow-100 mb-30">
+      <div class="max-w-6xl mx-auto text-center">
+          <h2 class="text-4xl font-bold text-gray-800 mb-12">About Budget Tracker</h2>
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                  <img src="../LandingPage/booktodo.jpg" alt="TaskTide," class="rounded-lg shadow-xl h-110 w-110 animate-pulse 2s">
+              </div>
+              <div class="text-left">
+                  
+                  <h3 class="text-2xl font-semibold text-black mb-3">About</h3>
+                  <p class="text-lg text-black mb-6 text-xl">Gain control over your finances with clear tracking and budgeting. 
+                    Make informed financial decisions with insights into spending habits.
+                  
+                
+                  </p>
+                  <h3 class="text-2xl font-semibold text-black mb-3">Our Mission</h3>
+                  <p class="text-md text-black mb-6 text-xl">
+                    We give users the tools and insights to manage finances confidently.
+                     Making financial management accessible and straightforward
+                  <h3 class="text-2xl font-semibold text-black mb-3">Our Vision</h3>
+                  <p class="text-md text-black mb-6 text-xl">Build a user base of financially savvy individuals.
+                    Enabling users to achieve financial stability and success.
+                  </p>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  
+  
+  <a href="addtransac.html" class="fixed bottom-14 right-12 bg-gray-600 text-white p-4 rounded-full shadow-lg text-xl font-extrabold"> + </a>
+
+  <footer class=" bg-gradient-to-l from-gray-800 to-gray-600 w-full text-white h-auto">
+         
+      <div class="flex justify-center py-6 ">
+         <div class=" grid grid-cols-1 lg:grid-cols-4 lg:rows-1 md:cols-1 md:rows-4 p-4 md:w-250 md:h-auto gap-8"> 
+            <p class="border-4 border-white w-55 h-45 text-white rounded-2xl mb-6 mr-4">
+               <img src="../LandingPage/list.jpg" class="w-54 h-43">
+           </p>
+            <p class="border-4 border-white w-55 h-45  text-white rounded-2xl  mb-6 ">
+              <img src="../LandingPage/clock.jpg" class="w-54 h-43 rounded-2xl">
+            </p>
+            <p class="border-4 border-white w-55 h-45 text-white rounded-2xl mb-6">
+             <img src="../LandingPage/if not.jpg" class="w-54 h-43">
+            </p>
+            <p class="border-4 border-white w-55 h-45 text-white rounded-2xl  mb-6">
+              <img src="../LandingPage/do it.jpg" class="w-54 h-43">
+            </p>
+         </div>
+      </div>
+
+       <div class="w-full py-4 flex justify-center">
+          <div class="text-center">
+               <p class="text-white  text-xl font-semibold"> For Help And Support,Contact Us At: </p>
+               <p class="text-white text-lg">08178623456 or 09054712387</p>
+         </div>
+       </div>
+  </footer>
+  
+
+<script>
+   const navTogglerButton = document.querySelector("#navToggler");
+const openNavToggler = document.querySelector("#openNav");
+const closeNavToggler = document.querySelector("#closeNav");
+const mainNavToggler = document.querySelector("#mainNav");
+
+
+
+navTogglerButton.addEventListener('click' , function () {
+    openNavToggler.classList.toggle("hidden");
+    closeNavToggler.classList.toggle("hidden");
+    mainNavToggler.classList.toggle("hidden");
+} )
+</script>
+
+    <!-- <script>
+      function myfunction(){
+         let x = document.getElementById("body");
+         x.classList.toggle("black");
+        // let y = document.textContent;
+        // y.classList.toggle("white");
+      }
+   </script>  -->
+</body>
+</html>

@@ -1,0 +1,95 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-green-800 min-h-screen">
+
+  
+  <header class="bg-yellow-100 text-white p-4 flex justify-between items-center fixed top-0 left-0 w-full z-50">
+ 
+    <div class="bg-yellow-100 text-black p-4 flex items-center">
+      <a href="home.html" class="mr-3 text-lg">←</a>
+      <h1 class="text-xl font-bold">Setting</h1>
+    </div> 
+    <menu >
+      <button class="md:hidden" id="navToggler">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-8 h-8">
+          <path id="openNav" class="" stroke-linecap="round" stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
+          <path id="closeNav" class="hidden" strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+       <nav id="mainNav"
+        class=" left-0 top-[73px] w-[100%] flex justify-center p-[20px] h-[auto] py-20 md:sticky  md:p-0 hidden md:block">
+        <ul id="text" class="flex flex-col gap-10 md:flex-row items-center font-semibold text-xl text-black">
+          <li>
+            <a class=" hover:border-b-4 border-gray-400 py-5" href="dashboard.html">Home</a>
+          </li>
+          <li>
+            <a class=" hover:border-b-4 border-gray-400 py-5" href="addtrans.html">Add Transaction</a>
+          </li>
+          <li>
+            <a class=" hover:border-b-4 border-gray-400 py-5" href="about.html">About</a>
+          </li>
+          <li>
+            <a class=" hover:border-b-4 border-gray-400 py-5" href="setting.html">Setting</a>
+          </li>
+        </ul>
+      </nav> 
+    </menu>
+  </header>
+
+
+
+
+  <!-- Settings Form -->
+  <form class="p-4 space-y-4 mt-24 ">
+    <div>
+      <label class="block mb-1 font-semibold text-yellow-100">Currency</label>
+      <select class="w-full p-3 border rounded-lg" required>
+        <option>₦ NGN</option>
+        <option>$ USD</option>
+        <option>€ EUR</option>
+      </select>
+    </div>
+    <div>
+      <label class="block mb-1 font-semibold text-yellow-100">Monthly Budget</label>
+      <input type="number" placeholder="Enter amount" class="w-full p-3 border rounded-lg" required>
+    </div>
+
+
+  
+    <a href="addtransac.html" class="fixed bottom-14 right-12 bg-gray-600 text-white p-4 rounded-full shadow-lg text-xl font-extrabold"> + </a>
+
+    <input type="date" class="w-full p-3 border rounded-lg mb-6">
+    
+    <label class="text-yellow-100">Income/Expenses</label>
+    <select class="w-full p-3 border rounded-lg" required>
+      <option>select</option>
+      <option>Income</option>
+      <option>Expense</option>
+    </select>
+
+    <button class="w-full bg-yellow-100 text-black font-semibold p-3 rounded-lg" id="SaveSettings" >Save Settings</button>
+  </form>
+
+
+<script>
+
+document.getElementById("SaveSettings").addEventListener('click',function(e){
+    alert("Settings Saved Successfully!");
+})
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,208 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Budget Tracker - Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-green-800 min-h-screen flex flex-col">
+
+  
+  <header id="head" class="flex justify-between py-5 px-10 border-b-2 align-items bg-yellow-100 fixed top-0 left-0 w-full z-50 ">
+  <h3 class="font-semibold text-2xl">Budget Tracker</h3>
+       
+  <menu >
+    <button class="md:hidden" id="navToggler">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-8 h-8">
+        <path id="openNav" class="" stroke-linecap="round" stroke-linejoin="round"
+          d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
+        <path id="closeNav" class="hidden" strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+     <nav id="mainNav"
+      class=" left-0 top-[73px] w-[100%] flex justify-center p-[20px] h-[auto] py-20 md:sticky  md:p-0 hidden md:block">
+      <ul id="text" class="flex flex-col gap-10 md:flex-row items-center font-semibold text-sm">
+        <li>
+          <a class=" hover:border-b-4 border-gray-400 py-5" href="home.html">Home</a>
+        </li>
+        <li>
+          <a class=" hover:border-b-4 border-gray-400 py-5" href="about.html">About</a>
+        </li>
+        <li>
+          <a class=" hover:border-b-4 border-gray-400 py-5" href="addtransac.html">Add Transaction</a>
+        </li>
+        <li>
+          <a class=" hover:border-b-4 border-gray-400 py-5" href="setting.html">Setting</a>
+        </li>
+      </ul>
+    </nav> 
+  </menu>
+</header>
+
+
+<h2 class="text-center font-bold mt-24 text-yellow-100 san mb-8">ADD TRANSACTIONS</h2>
+
+<section  class=" grid grid-cols-2 mb-8 p-4 gap-4" >
+  <div class="flex flex-col items-center justify-center md:flex-row gap-2 space-y-2 md:space-y-0 md:space-x-2 flex-wrap shadow rounded" >
+    <input type="number" id="income-input" placeholder="Enter income amount" class="font-medium h-10 text-black rounded w-full md:w-full bg-white" >
+    <input type="text" id="income-desc" placeholder="Income source (e.g.,Salary) " class="font-medium h-10 rounded w-full md:w-full bg-white">
+    <button onclick="addIncome()"   class="text-white bg-red-500 font-semibold rounded"><i></i> Add Income</button>
+  </div>
+
+  <div class="flex flex-col items-center justify-center md:flex-row gap-2 space-y-2 md:space-y-0 md:space-x-2 flex-wrap shadow rounded" >
+    <input type="number" id="expense-input" placeholder="Enter expense amount" class="font-medium h-10 text-black rounded w-full md:w-full bg-white" >
+    <input type="text" id="expense-desc" placeholder="Expense source (e.g.,Rent)" class="font-medium h-10 rounded w-full md:w-full bg-white">
+    <button onclick="addExpense()"   class="text-white bg-red-500 font-semibold rounded"><i></i> Add Expenses</button>
+  </div>
+    </section>
+ 
+  <section class="p-4 grid grid-cols-3 gap-3 mb-6 ">
+    <div class="bg-green-500 text-white p-3 rounded-xl shadow-lg font-bold">
+      <h3>Income</h3>
+      <p id="total-income">₦0</p>
+    </div>
+    </div>
+    <div class="bg-red-500 text-white p-3 rounded-xl shadow font-bold">
+      <h3>Expenses</h3>
+      <p id="total-expense">₦0</p>
+    </div>
+    <div class="bg-yellow-500 text-white p-3 rounded-xl shadow font-bold">
+      <h3>Remaining</h3>
+      <p id="remaining-balance">₦0</p>
+    </div>
+  </section>
+
+
+
+
+ <p class="font-bold ml-4 text-white">Recent Transactions </p>
+  <section class="flex justify-between">   
+
+  <section class="p-4 flex-1">
+    
+    <div class="bg-white p-3 rounded-lg shadow mb-2 flex justify-between">
+     <h2 class="font-semibold mb-3">Income transactions</h2>
+      <ul class="text-red-700 font-bold" id="income-list"></ul>
+    </div>
+
+ 
+  </section> 
+  
+  <section class="p-4 flex-1">
+    <div class="bg-white p-3 rounded-lg shadow mb-2 flex justify-between">
+      <h2 class="font-semibold mb-3">Expenses transactions</h2>
+       <ul class="text-red-700 font-bold text-xl" id="expense-list"></ul>
+     </div>
+
+   </section>
+ </section>
+
+
+
+  
+  <a href="addtransac.html" class="fixed bottom-14 right-12 bg-gray-600 text-white p-4 rounded-full shadow-lg text-xl font-extrabold"> + </a>
+
+  <!-- Bottom Navigation -->
+  <nav class="bg-gray-700 p-3 shadow flex justify-around fixed bottom-0 w-full">
+    <a href="index.html" class="text-white font-bold">Contact Us</a>
+    <a href="reports.html" class="text-white">Budget Tracker</a>
+  </nav>
+
+
+  <script>
+
+
+let totalIncome = 0;
+let totalExpense = 0;
+
+function updateDisplay() {
+  document.getElementById("total-income").textContent = `₦${totalIncome.toLocaleString()}`;
+  document.getElementById("total-expense").textContent = `₦${totalExpense.toLocaleString()}`;
+  document.getElementById("remaining-balance").textContent = `₦${(totalIncome - totalExpense).toLocaleString()}`;
+}
+
+function parseAmount(value) {
+  return parseFloat(value.replace(/₦|,/g, "").trim());
+}
+
+function addIncome() {
+  const amountEl = document.getElementById("income-input");
+  const descEl = document.getElementById("income-desc");
+
+  const amount = parseAmount(amountEl.value);
+  const desc = descEl.value.trim();
+
+  if (isNaN(amount) || amount <= 0) {
+    alert("Enter a valid income amount");
+    return;
+  }
+  if (!desc) {
+    alert("Enter what this income is for");
+    return;
+  }
+
+  totalIncome += amount;
+
+  const li = document.createElement("li");
+  li.innerHTML = `<strong>+₦${amount.toLocaleString()}</strong> — ${desc}`;
+  document.getElementById("income-list").appendChild(li);
+
+  amountEl.value = "";
+  descEl.value = "";
+  updateDisplay();
+}
+
+function addExpense() {
+  const amountEl = document.getElementById("expense-input");
+  const descEl = document.getElementById("expense-desc");
+
+  const amount = parseAmount(amountEl.value);
+  const desc = descEl.value.trim();
+
+  if (isNaN(amount) || amount <= 0) {
+    alert("Enter a valid expense amount");
+    return;
+  }
+  if (!desc) {
+    alert("Enter what this expense is for");
+    return;
+  }
+
+  totalExpense += amount;
+
+  const li = document.createElement("li");
+  li.innerHTML = `<strong>-₦${amount.toLocaleString()}</strong> — ${desc}`;
+  document.getElementById("expense-list").appendChild(li);
+
+  amountEl.value = "";
+  descEl.value = "";
+  updateDisplay();
+}
+
+// Initialize on load
+updateDisplay();
+
+
+
+
+    const navTogglerButton = document.querySelector("#navToggler");
+ const openNavToggler = document.querySelector("#openNav");
+ const closeNavToggler = document.querySelector("#closeNav");
+ const mainNavToggler = document.querySelector("#mainNav");
+ 
+ 
+ 
+ navTogglerButton.addEventListener('click' , function () {
+     openNavToggler.classList.toggle("hidden");
+     closeNavToggler.classList.toggle("hidden");
+     mainNavToggler.classList.toggle("hidden");
+ } )
+ </script>
+
+</body>
+</html>
