@@ -9,55 +9,55 @@
   <title>Budget Tracker - Dashboard</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-green-800 min-h-screen flex flex-col">
+<body class=" min-h-screen flex flex-col">
 
-  
-  <header id="head" class="flex justify-between py-5 px-10 border-b-2 align-items bg-yellow-100 fixed top-0 left-0 w-full z-50 ">
-  <h3 class="font-semibold text-2xl">Budget Tracker</h3>
-       
-  <menu >
-    <button class="md:hidden" id="navToggler">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-        class="w-8 h-8">
-        <path id="openNav" class="" stroke-linecap="round" stroke-linejoin="round"
-          d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
-        <path id="closeNav" class="hidden" strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-      </svg>
-    </button>
-     <nav id="mainNav"
-      class=" left-0 top-[73px] w-[100%] flex justify-center p-[20px] h-[auto] py-20 md:sticky  md:p-0 hidden md:block">
-      <ul id="text" class="flex flex-col gap-10 md:flex-row items-center font-semibold text-sm">
-        <li>
-          <a class=" hover:border-b-4 border-gray-400 py-5" href="index.html">Home</a>
-        </li>
-        <li>
-          <a class=" hover:border-b-4 border-gray-400 py-5" href="about.html">About</a>
-        </li>
-        <li>
-          <a class=" hover:border-b-4 border-gray-400 py-5" href="addtransac.html">Add Transaction</a>
-        </li>
-        <li>
-          <a class=" hover:border-b-4 border-gray-400 py-5" href="setting.html">Setting</a>
-        </li>
-      </ul>
-    </nav> 
-  </menu>
-</header>
+   
+  <header id="head" class="flex justify-between py-5 px-10 border-b-2 align-items bg-blue-700 fixed top-0 left-0 w-full z-50 ">
+    <h3 class="font-semibold text-3xl text-white">BudgetWise</h3>
+
+    <menu >
+      <button class="md:hidden bg-white" id="navToggler">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-8 h-8">
+          <path id="openNav" class="" stroke-linecap="round" stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
+          <path id="closeNav" class="hidden" strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+       <nav id="mainNav"
+        class=" left-0 top-[73px] w-[100%] flex justify-center p-[20px] h-[auto] py-20 md:sticky  md:p-0 hidden md:block">
+        <ul id="text" class="flex flex-col gap-10 md:flex-row items-center font-semibold text-xl text-white">
+          <li>
+            <a class=" hover:border-b-4 border-gray-400 py-5" href="index.html">Home</a>
+          </li>
+          <li>
+            <a class=" hover:border-b-4 border-gray-400 py-5" href="about.html">About</a>
+          </li>
+          <li>
+            <a class=" hover:border-b-4 border-gray-400 py-5 flex-1" href="addtransac.html">Add Transactions</a>
+          </li>
+          <li>
+           <a class=" hover:border-b-4 border-gray-400 py-5" href="setting.html">Setting</a>
+         </li>
+        </ul>
+      </nav> 
+    </menu>
+  </header>
 
 
-<h2 class="text-center font-bold mt-24 text-yellow-100 san mb-8">ADD TRANSACTIONS</h2>
+<h2 class="text-center font-bold mt-24 text-black san mb-8" style="font-family:'Times New Roman', Times, serif;">ADD TRANSACTIONS</h2>
 
-<section  class=" grid grid-cols-2 mb-8 p-4 gap-4" >
-  <div class="flex flex-col items-center justify-center md:flex-row gap-2 space-y-2 md:space-y-0 md:space-x-2 flex-wrap shadow rounded" >
-    <input type="number" id="income-input" placeholder="Enter income amount" class="font-medium h-10 text-black rounded w-full md:w-full bg-white" >
-    <input type="text" id="income-desc" placeholder="Income source (e.g.,Salary) " class="font-medium h-10 rounded w-full md:w-full bg-white">
-    <button onclick="addIncome()"   class="text-white bg-red-500 font-semibold rounded"><i></i> Add Income</button>
+<section  class=" grid md:grid-cols-2 sm:grid-cols-1 mb-8 p-4 gap-4" >
+  <div class="flex flex-col items-center justify-center md:flex-row gap-2 w-screen md:w-full space-y-2 md:space-y-0 md:space-x-2 flex-wrap shadow-2xl rounded bg-blue-700" >
+    <input type="number" id="income-input" placeholder="Enter income amount" class="font-medium h-10  rounded w-auto md:w-full  mt-2" >
+    <input type="text" id="income-desc" placeholder="Income source (e.g.,Salary) " class="font-medium h-10 rounded w-auto md:w-full ">
+    <button onclick="addIncome()"   class="text-black bg-white font-bold rounded text-sm"><i></i> Add Income +</button>
   </div>
 
-  <div class="flex flex-col items-center justify-center md:flex-row gap-2 space-y-2 md:space-y-0 md:space-x-2 flex-wrap shadow rounded" >
-    <input type="number" id="expense-input" placeholder="Enter expense amount" class="font-medium h-10 text-black rounded w-full md:w-full bg-white" >
-    <input type="text" id="expense-desc" placeholder="Expense source (e.g.,Rent)" class="font-medium h-10 rounded w-full md:w-full bg-white">
-    <button onclick="addExpense()"   class="text-white bg-red-500 font-semibold rounded"><i></i> Add Expenses</button>
+  <div class="flex flex-col items-center justify-center md:flex-row gap-2 w-screen md:w-full space-y-2 md:space-y-0 md:space-x-2 flex-wrap shadow-2xl rounded bg-blue-700" >
+    <input type="number" id="expense-input" placeholder="Enter expense amount" class="font-medium h-10 text-black rounded w-auto md:w-full mt-2" >
+    <input type="text" id="expense-desc" placeholder="Expense source (e.g.,Rent)" class="font-medium h-10 rounded w-auto md:w-full">
+    <button onclick="addExpense()"   class="text-black bg-white font-bold rounded text-sm"><i></i> Add Expenses +</button>
   </div>
     </section>
  
@@ -81,13 +81,13 @@
 
 
  <p class="font-bold ml-4 text-white">Recent Transactions </p>
-  <section class="flex justify-between">   
+  <section class="flex justify-between mb-12">   
 
   <section class="p-4 flex-1">
     
     <div class="bg-white p-3 rounded-lg shadow mb-2 flex justify-between">
      <h2 class="font-semibold mb-3">Income transactions</h2>
-      <ul class="text-red-700 font-bold" id="income-list"></ul>
+      <ul class="text-red-700 font-semibold text-xl" id="income-list"></ul>
     </div>
 
  
@@ -96,7 +96,7 @@
   <section class="p-4 flex-1">
     <div class="bg-white p-3 rounded-lg shadow mb-2 flex justify-between">
       <h2 class="font-semibold mb-3">Expenses transactions</h2>
-       <ul class="text-red-700 font-bold text-xl" id="expense-list"></ul>
+       <ul class="text-red-700 font-semibold text-xl" id="expense-list"></ul>
      </div>
 
    </section>
@@ -107,11 +107,56 @@
   
   <a href="addtransac.html" class="fixed bottom-14 right-12 bg-gray-600 text-white p-4 rounded-full shadow-lg text-xl font-extrabold"> + </a>
 
-  <!-- Bottom Navigation -->
-  <nav class="bg-gray-700 p-3 shadow flex justify-around fixed bottom-0 w-full">
-    <a href="index.html" class="text-white font-bold">Contact Us</a>
-    <a href="reports.html" class="text-white">Budget Tracker</a>
-  </nav>
+
+    <footer class=" bg-gradient-to-l from-gray-800 to-gray-600 w-full text-white h-auto">
+         
+      <div class="flex justify-center py-4 ">
+         <div class=" grid md:grid-cols-4 md:grid-rows-1 sm:grid-cols-2 sm:grid-rows-2 p-4 md:w-250 md:h-auto gap-4"> 
+           
+            <div class=" text-white rounded-2xl mb-6 mr-4 py-6">
+                          <div class="flex flex-cols-2 ">
+                        <img src="../BudgetTrackerApp/images/10x/account-balance-wallet.png" class="h-10 w-10">
+                        <span class="text-blue-900 font-bold text-2xl">BudgetWise</span>
+                    </div>
+                    <p class="text-white">Smart budget tracking for a better financial future.</p>
+                  </div>
+
+            <div class="  text-white grid grid-rows-5  py-4">
+                        <h4>Company</h4>
+                        <a href="#">About Us</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Press</a>
+            </div>
+
+            <div class="text-white grid grid-rows-5 py-4">
+                          <h4>Support</h4>
+                        <a href="#">Help Center</a>
+                        <a href="#">Contact Us</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+            </div>
+            <div class="text-white grid grid-rows-5 py-4">
+                        <h4>Product</h4>
+                        <a href="#">Features</a>
+                        <a href="#">Pricing</a>
+                        <a href="#">Mobile App</a>
+                        <a href="#">Security</a>
+            </div>
+         </div>
+      </div>
+
+       <div class="w-full py-4 flex justify-center">
+          <div class="text-center">
+               <p>&copy; 2024 BudgetWise. All rights reserved.</p>
+         </div>
+       </div>
+  </footer> 
+
+
+
+
+
 
 
   <script>

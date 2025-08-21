@@ -11,23 +11,22 @@
     <!-- <script src="/TAILWIND/script.js"></script> -->
 
 </head>
- <body class=" w-full bg-green-800">
+ <body class=" w-full">
          
-         <header id="head" class="flex justify-between py-5 px-10 border-b-2 align-items bg-yellow-100 fixed top-0 left-0 w-full z-50 ">
-           <h3 class="font-semibold text-3xl">Budget Tracker</h3>
+         <header id="head" class="flex justify-between py-5 px-10 border-b-2 align-items bg-blue-700 fixed top-0 left-0 w-full z-50 ">
+           <h3 class="font-semibold text-3xl text-white">BudgetWise</h3>
        
            <menu >
-             <button class="md:hidden" id="navToggler">
+             <button class="md:hidden bg-white" id="navToggler">
                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                  class="w-8 h-8">
-                 <path id="openNav" class="" stroke-linecap="round" stroke-linejoin="round"
-                   d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
+                 <path id="openNav" class="" stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
                  <path id="closeNav" class="hidden" strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                </svg>
              </button>
               <nav id="mainNav"
                class=" left-0 top-[73px] w-[100%] flex justify-center p-[20px] h-[auto] py-20 md:sticky  md:p-0 hidden md:block">
-               <ul id="text" class="flex flex-col gap-10 md:flex-row items-center font-semibold text-xl">
+               <ul id="text" class="flex flex-col gap-10 md:flex-row items-center font-semibold text-xl text-gray-200">
                  <li>
                    <a class=" hover:border-b-4 border-gray-400 py-5" href="index.html">Home</a>
                  </li>
@@ -35,7 +34,7 @@
                    <a class=" hover:border-b-4 border-gray-400 py-5" href="about.html">About</a>
                  </li>
                  <li>
-                   <a class=" hover:border-b-4 border-gray-400 py-5" href="addtransac.html">Add Transactions</a>
+                   <a class=" hover:border-b-4 border-gray-400 py-5 flex-1" href="addtransac.html">Add Transactions</a>
                  </li>
                  <li>
                   <a class=" hover:border-b-4 border-gray-400 py-5" href="setting.html">Setting</a>
@@ -44,17 +43,17 @@
              </nav> 
            </menu>
          </header>
-   
+
    <section class="w-full lg:h-50 md:h-100 mb-24 pt-24">
-      <div class="md:w-full lg:w-full mb-24 lg:h-50 mb-18 md:h-100 py-4 text-yellow-100">
+      <div class="md:w-full lg:w-full mb-24 lg:h-50 mb-18 md:h-100 py-4 text-black">
    
-          <p class=" font-bold text-6xl text-center mb-2"> WELCOME YOUR BUDGET TRACKER</p>
+          <p class="  text-6xl text-center mb-2" style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;"> WELCOME TO YOUR BUDGETWISE</p>
       
-           <p class=" text-center text-semibold text-xl mb-2"> Easily manage your incomes,and your expenses</p>
+           <p class=" text-center text-semibold text-xl mb-2 font-semibold"> Easily manage your incomes,and your expenses</p>
         
-            <p class=" text-sm text-center text-xl  mb-2">Earn but also spend wisely </p>
+            <p class=" text-sm text-center text-xl  mb-2 font-semibold">Earn but also spend wisely </p>
       
-            <p class="text-center text-lg  mb-2">Earn,Plan,Spend...</p>
+            <p class="text-center text-lg  mb-2 font-semibold">Earn,Plan,Spend...</p>
          
       </div>
    </section>
@@ -62,75 +61,179 @@
    <section  class="w-full h-auto p-4 mb-30">
          <div class=" flex flex-cols-2 items-center justify-center space-x-4 h-auto ">
         
-            <button  class="rounded-xl font-semibold bg-yellow-100 w-40 h-14 text-xl text-black">
+            <button  class="rounded-xl font-semibold  bg-gradient-to-t from-blue-500 to-blue-800 w-40 h-14 text-xl text-white shadow-lg">
             <a href="addtransac.html">Get Started</a> 
               </button>
-                   <button  class="rounded-xl font-semibold bg-black w-40  h-14 lg:text-xl md:text-lg text-yellow-100">
+                   <button  class="rounded-xl font-semibold bg-gradient-to-t from-blue-400 to-blue-800 w-40 h-14 lg:text-xl md:text-lg text-white shadow-lg">
                   <a href="about.html">Learn More</a>
                </button>
            
           </div>
    </section>
-     
-    <section id="about" class="py-16 px-6 md:px-12 relative bg-gradient-to-t from-green-700 to-yellow-100 mb-30">
-      <div class="max-w-6xl mx-auto text-center">
-          <h2 class="text-4xl font-bold text-gray-800 mb-12">About Budget Tracker</h2>
-          <div class="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                  <img src="../LandingPage/booktodo.jpg" alt="TaskTide," class="rounded-lg shadow-xl h-110 w-110 animate-pulse 2s">
-              </div>
-              <div class="text-left">
-                  
-                  <h3 class="text-2xl font-semibold text-black mb-3">About</h3>
-                  <p class="text-lg text-black mb-6 text-xl">Gain control over your finances with clear tracking and budgeting. 
-                    Make informed financial decisions with insights into spending habits.
-                  
+  
+    <section class="py-16 px-6 md:px-12 bg-gradient-to-t from-blue-400 to-blue-700 rounded-md shadow-lg">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-4xl font-bold text-white mb-12">Everything You Need to Manage Your Money</h2>
+            <div class="grid md:grid-cols-3 grid:rows-2  gap-10">
                 
-                  </p>
-                  <h3 class="text-2xl font-semibold text-black mb-3">Our Mission</h3>
-                  <p class="text-md text-black mb-6 text-xl">
-                    We give users the tools and insights to manage finances confidently.
-                     Making financial management accessible and straightforward
-                  <h3 class="text-2xl font-semibold text-black mb-3">Our Vision</h3>
-                  <p class="text-md text-black mb-6 text-xl">Build a user base of financially savvy individuals.
-                    Enabling users to achieve financial stability and success.
-                  </p>
-              </div>
-          </div>
-      </div>
-  </section>
+                <div class="bg-gray-50 p-8 rounded-lg shadow-lg hover:shadow-xl flex flex-col items-center">
+                    <div class="text-blue-950 mb-4"> <img src="../BudgetTrackerApp/images/10x/waterfall-chart.png" class="h-12 w-12 mx-auto" > </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Expense Tracking</h3>
+                    <p class="text-gray-600 mb-4">Automatically categorize and track all your expenses with smart AI-powered recognition.</p>
+                    <img src="/Assets/bwc.jpg" alt="Woman learning code" class="rounded-lg mt-4 w-full h-40 object-cover">
+                </div>
 
+                <div class="bg-gray-50 p-8 rounded-lg shadow-lg hover:shadow-xl flex flex-col items-center">
+                    <div class="text-blue-950 mb-4"> <img src="../BudgetTrackerApp/images/10x/shield-filled.png" class="h-12 w-12 mx-auto"></div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Budget Goals</h3>
+                    <p class="text-gray-600 mb-4"> Set realistic budget goals and get notifications when you're approaching your limits..</p>
+                    <img src="/Assets/bcommunity.png" alt="Women collaborating in tech" class="rounded-lg mt-4 w-full h-40 object-cover">
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-lg shadow-lg hover:shadow-xl flex flex-col items-center">
+                    <div class="text-blue-950 mb-4"> <img src="../BudgetTrackerApp/images/10x/phone-android.png" class="h-12 w-12 mx-auto"></div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Mobile App</h3>
+                    <p class="text-gray-600 mb-4">Track expenses on the go with our intuitive mobile app available on iOS and Android.</p>
+                    <img src="/Assets/bc.jpg" alt="Futuristic tech with blockchain" class="rounded-lg mt-4 w-full h-40 object-cover">
+                </div>
+
+                  <div class="bg-gray-50 p-8 rounded-lg shadow-lg hover:shadow-xl  flex flex-col items-center">
+                    <div class="text-blue-950 mb-4"><img src="../BudgetTrackerApp/images/10x/fingerprint.png" class="h-12 w-12 mx-auto">   </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Bank-Level Security</h3>
+                    <p class="text-gray-600 mb-4">Your financial data is protected with 256-bit encryption and multi-factor authentication.</p>
+                    <img src="/Assets/bc.jpg" alt="Futuristic tech with blockchain" class="rounded-lg mt-4 w-full h-40 object-cover">
+                </div>
+
+                 <div class="bg-gray-50 p-8 rounded-lg shadow-lg hover:shadow-xl flex flex-col items-center">
+                    <div class="text-blue-950 mb-4"> <img src="../BudgetTrackerApp/images/10x/leaderboard.png" class="h-12 w-12 mx-auto">     </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Visual Reports</h3>
+                    <p class="text-gray-600 mb-4">Get detailed insights with beautiful charts and reports to understand your spending patterns.</p>
+                    <img src="/Assets/bc.jpg" alt="Futuristic tech with blockchain" class="rounded-lg mt-4 w-full h-40 object-cover">
+                </div>
+
+                   <div class="bg-gray-50 p-8 rounded-lg shadow-lg hover:shadow-xl flex flex-col items-center">
+                    <div class="text-blue-950 mb-4">  <img src="../BudgetTrackerApp/images/10x/10x/sync-problem.png" class="h-12 w-12 mx-auto"> </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Auto Sync</h3>
+                    <p class="text-gray-600 mb-4">Connect your bank accounts and credit cards for automatic transaction importing.</p>
+                    <img src="/Assets/bc.jpg" alt="Futuristic tech with blockchain" class="rounded-lg mt-4 w-full h-40 object-cover">
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+    
+    <section class="py-16 px-6 md:px-12 ">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-4xl font-bold text-gray-800 mb-12">Choose Your Plan</h2>
+
+            <div class="grid md:grid-cols-3 gap-4">
+
+                <div class="p-4 border-gray-300 border-solid border-2 rounded-lg shadow-lg  ">
+                    <h3 class="text-gray-600 text-4xl font-semibold mb-8">Free</h3>
+                    <div><span class="text-blue-800 text-5xl mb-12 font-bold">$0</span><span>/month</span></div>
+                    <div class="flex justify-center items-center">
+                     <ul class="text-gray-600 mb-8 py-4 px-4 space-y-4 text-left">
+                        <li><i>*</i> Track up to 100 transactions</li>
+                        <li><i>*</i> Basic expense categories</li>
+                        <li><i>*</i> Monthly reports</li>
+                        <li><i>*</i> Bank account sync</li>
+                        <li><i>*</i> Advanced analytics</li>
+                      </ul>
+                      </div>
+                      <button class="bg-blue-800 text-white font-semibold rounded shadow-md text-sm">Get Started</button>   
+                </div>
+
+                
+                <div class="p-4 border-gray-300 border-solid border-2 rounded-lg shadow-lg">
+                  
+                    <h3 class="text-gray-600 text-4xl font-semibold mb-8">Pro</h3>
+                    <div><span class="text-blue-800 text-5xl mb-14 font-bold">$9.99</span><span>/month</span></div>
+                    <div class="flex justify-center items-center">
+                     <ul class="text-gray-600 mb-8 py-4 px-4 space-y-4 text-left">
+                        <li><i>*</i> Unlimited transactions</li>
+                        <li><i>*</i> Custom categories</li>
+                        <li><i>*</i> Advanced reports</li>
+                        <li><i>*</i> Bank account sync</li>
+                        <li><i>*</i> Goal tracking</li>
+                      </ul>
+                      </div>
+                      <button class="bg-blue-800 text-white font-semibold rounded shadow-md text-sm">Start Free Trial</button>   
+                </div>
+
+
+                    <div class="p-4 border-gray-300 border-solid border-2 rounded-lg shadow-lg">
+                  
+                    <h3 class="text-gray-600 text-4xl font-semibold mb-8">Business</h3>
+                    <div><span class="text-blue-800 text-5xl mb-14 font-bold">$19.9</span><span>/month</span></div>
+                    <div class="flex justify-center items-center">
+                     <ul class="text-gray-600 mb-8 py-4 px-4 space-y-4 text-left">
+                        <li><i>*</i> Everything in Pro</li>
+                        <li><i>*</i> Multi-user access</li>
+                        <li><i>*</i> Team collaboration</li>
+                        <li><i>*</i> Priority support</li>
+                        <li><i>*</i> Custom integrations</li>
+                      </ul>
+                      </div>
+                      <button class="bg-blue-800 text-white font-semibold rounded shadow-md text-sm">Contact Sales</button>   
+                </div>
+
+        
+            </div>
+        </div>
+    </section>
   
   
   <a href="addtransac.html" class="fixed bottom-14 right-12 bg-gray-600 text-white p-4 rounded-full shadow-lg text-xl font-extrabold"> + </a>
-
+ 
   <footer class=" bg-gradient-to-l from-gray-800 to-gray-600 w-full text-white h-auto">
          
-      <div class="flex justify-center py-6 ">
-         <div class=" grid grid-cols-1 lg:grid-cols-4 lg:rows-1 md:cols-1 md:rows-4 p-4 md:w-250 md:h-auto gap-8"> 
-            <p class="border-4 border-white w-55 h-45 text-white rounded-2xl mb-6 mr-4">
-               <img src="../LandingPage/list.jpg" class="w-54 h-43">
-           </p>
-            <p class="border-4 border-white w-55 h-45  text-white rounded-2xl  mb-6 ">
-              <img src="../LandingPage/clock.jpg" class="w-54 h-43 rounded-2xl">
-            </p>
-            <p class="border-4 border-white w-55 h-45 text-white rounded-2xl mb-6">
-             <img src="../LandingPage/if not.jpg" class="w-54 h-43">
-            </p>
-            <p class="border-4 border-white w-55 h-45 text-white rounded-2xl  mb-6">
-              <img src="../LandingPage/do it.jpg" class="w-54 h-43">
-            </p>
+      <div class="flex justify-center py-4 ">
+         <div class=" grid md:grid-cols-4 md:grid-rows-1 sm:grid-cols-2 sm:grid-rows-2 p-4 md:w-250 md:h-auto gap-4"> 
+           
+            <div class=" text-white rounded-2xl mb-6 mr-4 py-6">
+                          <div class="flex flex-cols-2 ">
+                        <img src="../BudgetTrackerApp/images/10x/account-balance-wallet.png" class="h-10 w-10">
+                        <span class="text-blue-900 font-bold text-2xl">BudgetWise</span>
+                    </div>
+                    <p class="text-white">Smart budget tracking for a better financial future.</p>
+                  </div>
+
+            <div class="  text-white grid grid-rows-5  py-4">
+                        <h4>Company</h4>
+                        <a href="#">About Us</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Press</a>
+            </div>
+
+            <div class="text-white grid grid-rows-5 py-4">
+                          <h4>Support</h4>
+                        <a href="#">Help Center</a>
+                        <a href="#">Contact Us</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+            </div>
+            <div class="text-white grid grid-rows-5 py-4">
+                        <h4>Product</h4>
+                        <a href="#">Features</a>
+                        <a href="#">Pricing</a>
+                        <a href="#">Mobile App</a>
+                        <a href="#">Security</a>
+            </div>
          </div>
       </div>
 
        <div class="w-full py-4 flex justify-center">
           <div class="text-center">
-               <p class="text-white  text-xl font-semibold"> For Help And Support,Contact Us At: </p>
-               <p class="text-white text-lg">08178623456 or 09054712387</p>
+               <p>&copy; 2024 BudgetWise. All rights reserved.</p>
          </div>
        </div>
-  </footer>
-  
+  </footer> 
+
+
 
 <script>
    const navTogglerButton = document.querySelector("#navToggler");
