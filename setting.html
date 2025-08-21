@@ -129,6 +129,20 @@ document.getElementById("SaveSettings").addEventListener('click',function(e){
 
 </script>
 
+<script>
+   const navTogglerButton = document.querySelector("#navToggler");
+const openNavToggler = document.querySelector("#openNav");
+const closeNavToggler = document.querySelector("#closeNav");
+const mainNavToggler = document.querySelector("#mainNav");
+
+
+
+navTogglerButton.addEventListener('click' , function () {
+    openNavToggler.classList.toggle("hidden");
+    closeNavToggler.classList.toggle("hidden");
+    mainNavToggler.classList.toggle("hidden");
+} )
+</script>
 
 </body>
 </html>
